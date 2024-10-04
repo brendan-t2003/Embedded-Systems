@@ -1,6 +1,6 @@
 #include "mbed.h"
 
-// Date Type ComplexNumber_C
+// Date for ComplexNumber_C
 typedef struct {
   double real;
   double imag;
@@ -8,22 +8,27 @@ typedef struct {
 
 
 int main() {
-
-    //Create instance of a complex number
+    //used for output 
+    double abs;
+    //Create complext number 
     ComplexNumber_C p;
 
-    //Initialise each attribute 
+    //real and imaginary compotnents  
     p.real = 2.0;
     p.imag = 3.0;
     
-    //Create and Initialise 
-    ComplexNumber_C q = {1.0, 1.0};
-
-    // TASK:
-    // Create another complex number y
-    // Calculate the complex sum of p and q and store in y
-    // Use printf to display as a complex number (hint: you need two placeholders)
+    //Create absolute value 
+    abs = sqrt((p.real)*(p.real)+(p.imag)*(p.imag));
+    //arbitrery binary input 
+    int binarynumber = 0b10010;
+ 
     
-    while (true) {
-    }
+        //output for the absolute value
+        printf("\nabsolute value = %f",abs);
+        //binary number to compare
+        printf("\nbinary number = 0b10010 ");
+        //hex output
+        printf("\nhex nunmber = %x",binarynumber);
+
+    
 }
